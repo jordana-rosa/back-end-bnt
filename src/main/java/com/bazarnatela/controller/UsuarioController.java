@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.bazarnatela.model.Usuario;
 import com.bazarnatela.service.UsuarioService;
+import org.springframework.web.bind.annotation.PutMapping;
+
 
 @RestController 
 @RequestMapping("/usuarios")
@@ -39,5 +41,9 @@ public class UsuarioController {
         service.delete(idInteger); 
 
     }
+    @PutMapping()
+    public Usuario updateUsuario (@RequestBody Usuario usuario){
+        return service.updateUsuario(usuario);
 
+    }
 }

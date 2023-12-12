@@ -27,5 +27,11 @@ public class UsuarioService {
     public void delete (Integer idInteger ){
         repository.deleteById(idInteger);
 
+       
+
     } 
+    public Usuario updateUsuario (Usuario usuario){
+        return repository.saveAndFlush(usuario);
+
+    }
 }
